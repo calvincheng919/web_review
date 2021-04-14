@@ -41,29 +41,31 @@ Person.prototype.render = function() {
   mainSection.appendChild(card);
 }
 
-let ian_person = new Person("Ian", 17, "ian@ian.com", "Terminator2");
-let marissa_person = new Person("Marissa",17, "marissa@marissa.com", "Terminator3");
-let calvin_person = new Person("Calvin",49, "calvina@calvin.com", "Terminator4");
-let sandee_person = new Person("Sandee", 25, "sandee@sandee.com", "Terminator 5")
-
-marissa_person.render();
-ian_person.render();
-calvin_person.render();
-sandee_person.render();
-
-// DRY - DON'T REPEAT YOURSELF
-
 // 1. Find the button and identify the event
 let createButton = document.getElementById('create'); // click event
 
 // 2. Add an event listener to the click event
-createButton.addEventListener('click', consoleMyStuff)
+createButton.addEventListener('click', createPerson)
 
-// consoleMyStuff is referred to as a callback function
+// create a new function called createPerson, leave the body blank
+function createPerson() {
+  
+  //List out the steps to render a person on the html screen
+  //1. We need all of the input from user, stored in variables 
+  let name = document.getElementById('name').value; 
+  let age = document.querySelector('#age').value;
+  let nickname = document.getElementById('nickname').value; 
 
-function consoleMyStuff() {
-    console.log("this button was clicked")
+  //2. Pass the input to the constructor function Person.
+
+  let person = new Person(name, age, "" , nickname)
+
+  //3. tell the individual to invoke its render() function
+
+  person.render();
+
 }
+
 
 
 
