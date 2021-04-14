@@ -1,0 +1,44 @@
+body {
+  background-color: gray;
+}
+
+.card {
+
+  background-color: lightcyan;
+  height: 150px;
+  width: 300px;
+  margin: auto;
+  margin-top: 25px;
+  border-radius: 10px;
+  border:  3px solid darkgreen;
+  text-align: center;
+
+}
+
+h1 {
+  text-align: center;
+}
+
+.other {
+  background-color: #f06d06;
+  height: 75px;
+  width: 300px;
+  margin: auto;
+  margin-top: 25px;
+  border-radius: 10px;
+  border:  3px solid darkgreen;
+  text-align: center;
+}
+
+#input {
+  background-color: aqua;
+  border: 1px black solid;
+  height: 120px;
+  width: 300px;
+  border-radius: 5px;
+  padding-top: 25px;
+  padding-left: 10px;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+}
